@@ -9,13 +9,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var now = 9
-        when (now) {
-            8, 9 -> {
-                Log.d("when", "현재 시간은 8시 또는 9시입니다.")
+        var ageOfMichael = 19
+        when(ageOfMichael) {
+            in 10..19 -> {
+                Log.d("when","마이클은 10대입니다.")
+            }
+            !in 10..19 -> {
+                Log.d("when","마이클은 10대가 아닙니다.")
             }
             else -> {
-                Log.d("when", "현재 시간은 9시가 아닙니다.")
+                Log.d("when","마이클의 나이를 알 수 없습니다.")
             }
         }
     }
